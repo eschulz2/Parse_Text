@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import ParseTwitterUtils
 
 class ViewController: UIViewController {
 
@@ -18,6 +19,10 @@ class ViewController: UIViewController {
 
     }
 
+    @IBAction func twitterTapped(sender: AnyObject) {
+        
+        PFTwitterUtils.initializeWithConsumerKey("ekgXQ5HWtv6DTfQTIg8yuZAF7", consumerSecret: "gXHLkSk5pejwoyjWw9OBfutZU1pYJBiuOyione99bcx7likVL4")
+    }
 
 }
 
