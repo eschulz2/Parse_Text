@@ -22,6 +22,14 @@ class ViewController: UIViewController {
     @IBAction func twitterTapped(sender: AnyObject) {
         
         PFTwitterUtils.initializeWithConsumerKey("ekgXQ5HWtv6DTfQTIg8yuZAF7", consumerSecret: "gXHLkSk5pejwoyjWw9OBfutZU1pYJBiuOyione99bcx7likVL4")
+        
+        PFTwitterUtils.logInWithBlock { (user:PFUser?, error:NSError?) -> Void in
+            if user == nil {
+                print("Problem...")
+            } else {
+                self.performSegueWithIdentifier("loginSegue", sender: nil)
+            }
+        }
     }
 
 }

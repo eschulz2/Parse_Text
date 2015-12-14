@@ -30,6 +30,8 @@
 		6B990FF91C1F7C0C003DB661 /* Parse.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B990FF41C1F7C0C003DB661 /* Parse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B990FFA1C1F7C0C003DB661 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B990FF51C1F7C0C003DB661 /* ParseTwitterUtils.framework */; };
 		6B990FFB1C1F7C0C003DB661 /* ParseTwitterUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B990FF51C1F7C0C003DB661 /* ParseTwitterUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B990FFE1C1F809E003DB661 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B990FFD1C1F809E003DB661 /* ListViewController.swift */; };
+		6B9910001C1F8101003DB661 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B990FFF1C1F8101003DB661 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +73,8 @@
 		6B990FF31C1F7C0C003DB661 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		6B990FF41C1F7C0C003DB661 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		6B990FF51C1F7C0C003DB661 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		6B990FFD1C1F809E003DB661 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		6B990FFF1C1F8101003DB661 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 				6B990FF01C1F72FB003DB661 /* frameworks */,
 				6B990FC21C1F7073003DB661 /* AppDelegate.swift */,
 				6B990FC41C1F7073003DB661 /* ViewController.swift */,
+				6B990FFD1C1F809E003DB661 /* ListViewController.swift */,
+				6B990FFF1C1F8101003DB661 /* PostViewController.swift */,
 				6B990FC61C1F7073003DB661 /* Main.storyboard */,
 				6B990FC91C1F7073003DB661 /* Assets.xcassets */,
 				6B990FCB1C1F7073003DB661 /* LaunchScreen.storyboard */,
@@ -222,8 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B9910001C1F8101003DB661 /* PostViewController.swift in Sources */,
 				6B990FC51C1F7073003DB661 /* ViewController.swift in Sources */,
 				6B990FC31C1F7073003DB661 /* AppDelegate.swift in Sources */,
+				6B990FFE1C1F809E003DB661 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
