@@ -33,8 +33,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUm-bN-E4Y">
-                                <rect key="frame" x="233" y="124" width="134" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUm-bN-E4Y">
+                                <rect key="frame" x="233" y="50" width="134" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="bGP-D6-8jn"/>
+                                    <constraint firstAttribute="height" constant="30" id="y5u-on-pFK"/>
+                                </constraints>
                                 <state key="normal" title="Sign In With Twitter"/>
                                 <connections>
                                     <action selector="twitterTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dre-Q0-kh6"/>
@@ -42,6 +46,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BUm-bN-E4Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6rc-AZ-PqI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BUm-bN-E4Y" secondAttribute="bottom" constant="520" id="FfJ-Xa-U1V"/>
+                            <constraint firstItem="BUm-bN-E4Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="cun-qC-J9v"/>
+                            <constraint firstItem="BUm-bN-E4Y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lg7-QI-KjO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UdG-ao-70E"/>
                     <connections>
@@ -95,19 +105,52 @@
                                 </constraints>
                                 <items>
                                     <navigationItem id="AD2-oS-gzk">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="l2d-jL-h2R"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Post" id="z2w-Df-c8M"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="l2d-jL-h2R">
+                                            <connections>
+                                                <action selector="cancelTapped:" destination="LC0-zg-ZkF" id="mYV-FN-KJf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Post" id="z2w-Df-c8M">
+                                            <connections>
+                                                <action selector="postTapped:" destination="LC0-zg-ZkF" id="YmV-5e-bmH"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Content Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RQJ-lp-PPe">
+                                <rect key="frame" x="30" y="160" width="540" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3fo-r1-Wpl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPC-tE-G0H">
+                                <rect key="frame" x="30" y="227" width="540" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nPC-tE-G0H" firstAttribute="leading" secondItem="INb-g3-Lvm" secondAttribute="leadingMargin" constant="10" id="AjM-es-1Ii"/>
+                            <constraint firstItem="RQJ-lp-PPe" firstAttribute="leading" secondItem="INb-g3-Lvm" secondAttribute="leadingMargin" constant="10" id="CtX-eV-fki"/>
+                            <constraint firstItem="nPC-tE-G0H" firstAttribute="centerX" secondItem="INb-g3-Lvm" secondAttribute="centerX" id="DtA-3o-zas"/>
+                            <constraint firstItem="RQJ-lp-PPe" firstAttribute="top" secondItem="I4E-LU-Wdg" secondAttribute="bottom" constant="140" id="Eo6-8H-mlt"/>
+                            <constraint firstItem="nPC-tE-G0H" firstAttribute="top" secondItem="RQJ-lp-PPe" secondAttribute="bottom" constant="37" id="LnH-IC-NmO"/>
                             <constraint firstItem="KKC-4i-ov9" firstAttribute="top" secondItem="I4E-LU-Wdg" secondAttribute="bottom" id="Q7r-hB-maV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RQJ-lp-PPe" secondAttribute="trailing" constant="10" id="kQU-PE-Jwg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KKC-4i-ov9" secondAttribute="trailing" id="qeE-1W-lun"/>
                             <constraint firstItem="KKC-4i-ov9" firstAttribute="leading" secondItem="INb-g3-Lvm" secondAttribute="leadingMargin" id="vmq-Tx-gfr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nPC-tE-G0H" secondAttribute="trailing" constant="10" id="zQU-eh-mfM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="nPC-tE-G0H" id="tdb-vH-7ig"/>
+                        <outlet property="textField" destination="RQJ-lp-PPe" id="Wxw-CI-Sm7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EKK-7N-RUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
