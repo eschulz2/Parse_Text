@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B8BB5061C31D395004A3980 /* WordPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8BB5051C31D395004A3980 /* WordPostTableViewCell.swift */; };
 		6B990FC31C1F7073003DB661 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B990FC21C1F7073003DB661 /* AppDelegate.swift */; };
 		6B990FC51C1F7073003DB661 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B990FC41C1F7073003DB661 /* ViewController.swift */; };
 		6B990FC81C1F7073003DB661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B990FC61C1F7073003DB661 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B8BB5051C31D395004A3980 /* WordPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPostTableViewCell.swift; sourceTree = "<group>"; };
 		6B990FBF1C1F7073003DB661 /* Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Words.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B990FC21C1F7073003DB661 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B990FC41C1F7073003DB661 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				6B990FC21C1F7073003DB661 /* AppDelegate.swift */,
 				6B990FC41C1F7073003DB661 /* ViewController.swift */,
 				6B990FFD1C1F809E003DB661 /* ListViewController.swift */,
+				6B8BB5051C31D395004A3980 /* WordPostTableViewCell.swift */,
 				6B990FFF1C1F8101003DB661 /* PostViewController.swift */,
 				6B990FC61C1F7073003DB661 /* Main.storyboard */,
 				6B990FC91C1F7073003DB661 /* Assets.xcassets */,
@@ -232,6 +235,7 @@
 				6B990FC51C1F7073003DB661 /* ViewController.swift in Sources */,
 				6B990FC31C1F7073003DB661 /* AppDelegate.swift in Sources */,
 				6B990FFE1C1F809E003DB661 /* ListViewController.swift in Sources */,
+				6B8BB5061C31D395004A3980 /* WordPostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

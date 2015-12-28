@@ -32,7 +32,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         query.orderByDescending("createdAt")
         query.findObjectsInBackgroundWithBlock { (wordPosts:[PFObject]?, error:NSError?) -> Void in
             if error == nil {
-                self.wordPosts = wordPosts as! [PFObject]!
+                self.wordPosts = wordPosts as [PFObject]!
                 self.tableView.reloadData()
             }
         }
@@ -43,9 +43,10 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCellWithIdentifier("wordCell") as! WordPostTableViewCell
         let wordPost = self.wordPosts[indexPath.row]
-        cell.textLabel!.text = wordPost["post"] as? String
+        cell.postLabel.text = wordPost["post"] as? String
+        
         return cell
     }
 
