@@ -27,6 +27,22 @@ class ViewController: UIViewController {
             if user == nil {
                 print("Problem...")
             } else {
+                
+                let url = NSURL(string: "https://api.twitter.com/1.1/account/verify_credentials.json")
+                let request = NSMutableURLRequest(URL: url!)
+                PFTwitterUtils.twitter()?.signRequest(request)
+                
+                NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+                    do {
+                    let responseDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves)
+                        let imageURL = responseDictionary["profile_image_url_https"] as! String
+                        let name = responseDictionary["name"] as! String
+                        
+                        user!.setObject(imageURL, forKey: "imageURL")
+                        user!.saveInBackground()
+                    } catch {}
+                }).resume()
+                
                 self.performSegueWithIdentifier("loginSegue", sender: nil)
             }
         }

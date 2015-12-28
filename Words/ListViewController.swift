@@ -45,7 +45,17 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("wordCell") as! WordPostTableViewCell
         let wordPost = self.wordPosts[indexPath.row]
+        let user = wordPost["user"] as! PFUser
+
         cell.postLabel.text = wordPost["post"] as? String
+        
+//        let url = user["imageURL"] as! String
+//        let imageData = NSData(contentsOfURL: NSURL(string: url)!)
+//        if imageData == nil {
+//            cell.userImageView.image = UIImage()
+//        } else {
+//            cell.userImageView.image = UIImage(data: imageData!)
+//        }
         
         return cell
     }
